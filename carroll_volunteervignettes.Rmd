@@ -328,6 +328,62 @@ nvig_type %>%
 
 ---
 
+# Some great examples
+
+`dplyr`
+
+https://github.com/tidyverse/dplyr/blob/master/vignettes/programming.Rmd
+
+![:scale 80%](images/dplyr.png)
+
+---
+
+# Some great examples
+
+`httr`
+
+https://github.com/r-lib/httr/blob/master/vignettes/api-packages.Rmd
+
+![:scale 80%](images/httr.png)
+
+---
+
+# Some great examples
+
+`MultiAssayExperiment`
+
+https://github.com/waldronlab/MultiAssayExperiment/blob/master/vignettes/MultiAssayExperiment.Rmd
+
+https://github.com/waldronlab/MultiAssayExperiment/blob/master/vignettes/QuickStartMultiAssay.Rmd
+
+![:scale 80%](images/multiassayexperiment.png)
+
+---
+
+# Some great examples
+
+`qicharts2`
+
+https://github.com/anhoej/qicharts2/blob/master/vignettes/qicharts2.Rmd
+
+![:scale 80%](images/qicharts2.png)
+
+---
+
+# Vignette vs `README`
+
+In each of these cases, the `README.md` file is simple and effective.
+
+![:scale 80%](images/dplyr_README.png)
+
+---
+
+# `README` as a Makeshift Vignette
+
+https://github.com/shabbychef/mazealls
+
+---
+
 # My Conclusion
 
 <br/>
