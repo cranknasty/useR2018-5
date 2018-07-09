@@ -2,7 +2,17 @@
 title: "Volunteer Vignettes"
 subtitle: "A Case-Study in Enhancing Documentation"
 author: "Jonathan Carroll @ useR2018"
-date: "2018-07-12"
+date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
+  <br />
+  <br />
+  <tr>
+    <th style=\"padding-right:25px!important\" align=\"center\"><a href=\"https://twitter.com/carroll_jono\"> <i class=\"fa fa-twitter fa-3x\"></i> </a></th>
+    <th style=\"padding-left:25px!important\" align=\"center\"><a href=\"https://github.com/jonocarroll\"> <i class=\"fa fa-github fa-3x\"></i> </a></th>
+  </tr>
+  <tr style=\"background-color:#fafafa\">
+    <th style=\"padding-right:25px!important\"><a href=\"https://twitter.com/carroll_jono\"> @carroll_jono </a></th>
+    <th style=\"padding-left:25px!important\"><a href=\"https://github.com/jonocarroll\"> @jonocarroll </a></th>
+  </tr></table>"
 output:
   xaringan::moon_reader:
     chakra: libs/remark-latest.min.js
@@ -21,7 +31,9 @@ editor_options:
 options(htmltools.dir.version = FALSE)
 options(servr.daemon = TRUE)
 options(DT.options = list(bPaginate = FALSE, fillContainer = TRUE, searching = FALSE, pageLength = 10, scrollY = 350))
+htmltools::tagList(rmarkdown::html_dependency_font_awesome())
 library(dplyr)
+library(ggplot2)
 ```
 
 # Background
@@ -34,13 +46,25 @@ What is a vignette?
  -- Hadley Wickham, R Packages
 ]
 
-To me, this should be distinct from a `README.md` (though there certainly may be overlap).
+<br/>
+
+To me, this should be distinct from a README file (though there certainly may be overlap).
 
 ---
 
-# `README`
+# What this isn't
 
-When I think of `README`...
+--
+
+![](images/mormon.jpg)
+
+.large[_"Do you have a moment to talk about vignettes?"_]
+
+---
+
+# README
+
+When I think of README...
 
 --
 
@@ -52,25 +76,91 @@ When I think of `README`...
 
 ---
 
-# `README`
+# README
 
 ![](images/readme_emacs.png)
 
 ---
 
-# `README`
+# README
 
 ![](images/readme_emacs2.png)
 
 ---
 
-# Favourite features
+# README is for window-shopping
+
+.pull-left[
+  ![:scale 150%](images/laptopbox.jpg)
+]
+
+.pull-right[
+The README should be:
+
+- What this is
+- What this does
+- Why you should 'buy' this one
+- .red[NOT] how to replace the HDD
+]
+
+.large[_What does someone looking to install this package need to know right now?_]
+
+---
+
+# Vignettes are for the gritty details
+
+![](images/laptopmanual.png)
+
+.pull-left[
+- How to change settings
+- How to replace functionality
+- What to do if something is broken
+]
+
+.pull-right[
+- How to go from nothing to a solution
+- 'Manufacturer' notes
+]
+
+---
+
+# Help files 
+
+These are the 'getting started' version of a manual.
+
+![](images/dplyr_help.png)
+
+They're a good starting point for usage or a quick-reference, 
+but rarely go into _when_ to use them and common variations of
+arguments.
+
+---
+
+# Help files
+
+![:scale 75%](images/owl.jpg)
+
+---
+
+# One option:
+
+![:scale 40%](images/BTTS.png)
+
+![:scale 50%](images/reprex.gif)
+
+.pull-right[
+  https://github.com/jonocarroll/btts
+]
+
+---
+
+# Favourite features of vignettes
 
 ![:scale 80%](images/favourites.png)
 
 ---
 
-# Favourite features
+# Favourite features of vignettes
 
  - worked examples
  - how multiple functions fit together
@@ -80,19 +170,23 @@ When I think of `README`...
  - comparison with similar packages
  - how to get started
 
+<br/>
+
+.large[_What problem were you trying to solve when you wrote this?_]
+
 ---
 
 # Show of hands
 
-_Who has an R package (CRAN/GitHub/GitLab/Bitbucket/personal)?_
+.large[_Who has an R package (CRAN/GitHub/GitLab/Bitbucket/personal)?_]
 
 --
 
-_Keep them up if it has a vignette_
+.large[_... keep them up if it has a vignette_]
 
 --
 
-_Keep them up if you think it's sufficient for someone to get to know your package_
+.large[_... keep them up if you think it's sufficient for someone to get to know your package_]
 
 ---
 
@@ -107,7 +201,7 @@ _Keep them up if you think it's sufficient for someone to get to know your packa
 .pull-left[
  Vignette(s)
 
- - .green[Can be separated into logical pages]
+ - .green[Can be separated into logical pages by topic]
   
 <!-- -->
 
@@ -154,7 +248,56 @@ _Keep them up if you think it's sufficient for someone to get to know your packa
 
 ---
 
-# Prior Art
+# Package Structure
+
+![:scale 65%](images/package-files.png)
+
+.pull-right[
+http://r-pkgs.had.co.nz/package.html
+]
+
+---
+
+# Package Structure
+
+Source tarball:
+
+![](images/sourcetarball.png)
+
+--
+
+<br/>
+
+Installed:
+
+![](images/installed.png)
+
+---
+
+# Not likely to be available soon
+
+We can already process the 'NEWS' file (under certain conditions)
+
+```{r, eval = FALSE}
+utils::news() #<<
+```
+
+Currently only able to process `NEWS.Rd` or `NEWS`.
+
+![:scale 70%](images/news.png)
+
+--
+
+.large[_An equivalent `utils::readme` might be useful_]
+
+---
+class: inverse, middle, center
+
+# How many packages have vignettes?
+
+---
+
+# Counting Vignettes
 
 The default template:
 
@@ -173,7 +316,7 @@ vignette: >
 
 ---
 
-# Prior Art
+# Counting Vignettes
 
 `datapasta`
 
@@ -270,7 +413,7 @@ One _could_ scrape this ~12,000 times, or alternatively, ask someone with a loca
 
 ---
 
-# CRAN Vignettes
+# 6441 CRAN Vignettes
 
 ```{r, echo = FALSE, fig.width = 12}
 vdata <- readRDS("data/pkg-vigs.rds")
@@ -298,7 +441,7 @@ nvig %>%
 
 ---
 
-# CRAN Vignettes
+# 6441 CRAN Vignettes
 
 ```{r, echo = FALSE, fig.width = 12}
 nvig_type <- vdata %>% 
@@ -325,6 +468,28 @@ nvig_type %>%
   scale_fill_manual(values = c("skyblue", "red3")) + 
   guides(fill = guide_legend(title = "Filetype"))
 ```
+
+---
+
+# 6441 CRAN Vignettes
+
+.pull-left[
+Which has the most vignettes?
+
+```{r}
+vdata %>% 
+  filter(pkg == "catdata") %>% 
+  count(vig_ext)
+```
+
+<br/>
+
+.large[_Having at least one would be great!_]
+]
+
+.pull-right[
+![:scale 80%](images/catdata.png)
+]
 
 ---
 
@@ -370,7 +535,7 @@ https://github.com/anhoej/qicharts2/blob/master/vignettes/qicharts2.Rmd
 
 ---
 
-# Vignette vs `README`
+# Vignette vs README
 
 In each of these cases, the `README.md` file is simple and effective.
 
@@ -378,7 +543,7 @@ In each of these cases, the `README.md` file is simple and effective.
 
 ---
 
-# `README` as a Makeshift Vignette
+# README as a Makeshift Vignette
 
 https://github.com/shabbychef/mazealls
 
@@ -404,20 +569,13 @@ https://github.com/shabbychef/mazealls
 
 ---
 
-# What this isn't
-
----
-
-# What I hope you take away
-
----
-
 # The Program
 
 ---
 
 # The Result
 
+![:scale 150%](images/office.gif)
 
 ---
 
@@ -437,4 +595,33 @@ https://github.com/shabbychef/mazealls
 
 # Where to now?
 
+---
+
+# In Summary
+
+ - Vignettes are under-utilised and can be very useful
+
+ <!--  -->
+
+ - You can get a head-start with `README_to_vignette`
+
+ <!--  -->
+
+ - Think about how a new user would approach your package -- where should they start?
+
+ <!--  -->
+ 
+ - If you'd like to collaborate on a vignette-assisting package, let me know!
+
+<table style="border-style:none;padding-top:30px;" class=".table">
+  <br />
+  <br />
+  <tr>
+    <th style="padding-right:25px!important" align="center"><a href="https://twitter.com/carroll_jono"> <i class="fa fa-twitter fa-3x"></i> </a></th>
+    <th style="padding-left:25px!important" align="center"><a href="https://github.com/jonocarroll"> <i class="fa fa-github fa-3x"></i> </a></th>
+  </tr>
+  <tr style="background-color:#fafafa">
+    <th style="padding-right:25px!important"><a href="https://twitter.com/carroll_jono"> @carroll_jono </a></th>
+    <th style="padding-left:25px!important"><a href="https://github.com/jonocarroll"> @jonocarroll </a></th>
+  </tr></table>
 
