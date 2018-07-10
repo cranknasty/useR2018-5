@@ -8,10 +8,12 @@ date: "<table style=\"border-style:none;padding-top:30px;\" class=\".table\">
   <tr>
     <th style=\"padding-right:25px!important\" align=\"center\"><a href=\"https://twitter.com/carroll_jono\"> <i class=\"fa fa-twitter fa-3x\"></i> </a></th>
     <th style=\"padding-left:25px!important\" align=\"center\"><a href=\"https://github.com/jonocarroll\"> <i class=\"fa fa-github fa-3x\"></i> </a></th>
+    <th style=\"padding-left:25px!important\" align=\"center\"><a href=\"https://gitlab.com/jonocarroll\"> <i class=\"fa fa-gitlab fa-3x\"></i> </a></th>
   </tr>
   <tr style=\"background-color:#fafafa\">
     <th style=\"padding-right:25px!important\"><a href=\"https://twitter.com/carroll_jono\"> @carroll_jono </a></th>
     <th style=\"padding-left:25px!important\"><a href=\"https://github.com/jonocarroll\"> @jonocarroll </a></th>
+    <th style=\"padding-left:25px!important\"><a href=\"https://gitlab.com/jonocarroll\"> @jonocarroll </a></th>
   </tr></table>"
 output:
   xaringan::moon_reader:
@@ -619,9 +621,11 @@ https://github.com/shabbychef/mazealls
   <tr>
     <th style="padding-right:25px!important" align="center"><a href="https://twitter.com/carroll_jono"> <i class="fa fa-twitter fa-3x"></i> </a></th>
     <th style="padding-left:25px!important" align="center"><a href="https://github.com/jonocarroll"> <i class="fa fa-github fa-3x"></i> </a></th>
+    <th style="padding-left:25px!important" align="center"><a href="https://gitlab.com/jonocarroll"> <i class="fa fa-gitlab fa-3x"></i> </a></th>
   </tr>
   <tr style="background-color:#fafafa">
     <th style="padding-right:25px!important"><a href="https://twitter.com/carroll_jono"> @carroll_jono </a></th>
     <th style="padding-left:25px!important"><a href="https://github.com/jonocarroll"> @jonocarroll </a></th>
+     <th style="padding-left:25px!important"><a href="https://gitlab.com/jonocarroll"> @jonocarroll </a></th>
   </tr></table>
 
