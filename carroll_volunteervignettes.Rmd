@@ -54,13 +54,17 @@ To me, this should be distinct from a README file (though there certainly may be
 
 ---
 
-# What this isn't
+# What this (mostly) isn't
 
 --
 
 ![](images/mormon.jpg)
 
 .large[_"Do you have a moment to talk about vignettes?"_]
+
+--
+
+(well, maybe a little)
 
 ---
 
@@ -189,6 +193,12 @@ arguments.
 --
 
 .large[_... keep them up if you think it's sufficient for someone to get to know your package_]
+
+--
+
+<br />
+
+.large[... now raise them again if you have a README.md]
 
 ---
 
@@ -545,7 +555,7 @@ In each of these cases, the `README.md` file is simple and effective.
 
 ---
 
-# README as a Makeshift Vignette
+# README as a Makeshift Vignette?
 
 https://github.com/shabbychef/mazealls
 
@@ -553,6 +563,8 @@ https://github.com/shabbychef/mazealls
 
 # My Conclusion
 
+<br/>
+<br/>
 <br/>
 
 .large[More vignettes!]
@@ -573,6 +585,28 @@ https://github.com/shabbychef/mazealls
 
 # The Program
 
+ - write 1 vignette per month
+ 
+--
+ 
+ - get to know the package
+ 
+--
+ 
+ - write the vignette
+  
+--
+ 
+ - submit it as a PR
+  
+--
+ 
+ - ???
+  
+--
+ 
+ - profit!
+
 ---
 
 # The Result
@@ -581,21 +615,154 @@ https://github.com/shabbychef/mazealls
 
 ---
 
-# Trying Another Angle
+# Vignette Attempted
+
+.pull-left[
+  `{texcheckR}`
+  
+  - Identified bugs
+  - Processed an example file
+  - Discovered new use-case(s)
+  
+]
+
+.pull-right[
+  ![:scale 80%](images/texcheckR.png)
+]
 
 ---
 
-# xxxxx
+# What Was Hard?
+
+- Not knowing which function to being with
+- Not understanding the different options
+- Not knowing which problem I was supposed to solve
+- Couldn't run README
+- Couldn't run examples
+
+--
+
+.large[BUT... this:]
+
+- Highlighted bugs to be fixed
+- Helped authors identify what to focus on
+- Highlighted the importance of integration tests
 
 ---
 
-# Which should I make?
+# People already have good READMEs
 
 ![:scale 80%](images/twitterpoll.png)
 
 ---
+class: inverse, middle, center
+
+# README_to_vignette()
+
+---
+
+# README_to_vignette
+
+![:scale 80%](images/README_to_vignette.png)
+
+--
+
+ - strips YAML header
+ - (carefully) guesses author from DESCRIPTION
+ - populates title from DESCRIPTION
+ - adds vignette header
+ - (?) removes badges
+
+---
+
+# README_to_vignette
+
+ - .red[NOT] intended to be a working, final vignette
+ - just a .green[first-pass starting point]
+ - .red[NOT] foolproof (directories, links, ...)
+ - consolidate effort already put in
+ - information now .green[travels with the package]
+
+---
+
+# Currently a fork of usethis
+
+![](images/usethis_fork.png)
+
+.large[_I could try to keep this in sync, or make a new package_]
+
+---
+
+# README_to_vignette
+
+https://jonocarroll.github.io/VolunteerVignettes/fs/fs-README-vignette.html
+
+https://jonocarroll.github.io/VolunteerVignettes/mazealls/mazealls-README-vignette.html
+
+https://jonocarroll.github.io/VolunteerVignettes/patchwork/patchwork-README-vignette.html
+
+https://jonocarroll.github.io/VolunteerVignettes/formulize/formulize-README-vignette.html
+
+https://jonocarroll.github.io/VolunteerVignettes/remedy/remedy-README-vignette.html
+
+---
+
+# Duplication?
+
+.large[_Not necessarily_]
+
+````markdown
+`r ''````{r child="vignettes/rmdhunks/example1.Rmd"}
+
+```
+````
+
+.pull-right[
+  https://yihui.name/knitr/demo/child/
+]
+
+--
+
+```{r, eval = FALSE}
+knitr::read_chunk()
+```
+
+.pull-right[
+  https://yihui.name/knitr/demo/externalization/
+]
+
+---
 
 # Where to now?
+
+ - If this was in a vignettes-focussed package...
+   + what would it do?
+   + what other functions could be there?
+   + could we convert other files to vignettes?
+   
+--
+
+What if I saw a good example... could I make that into a vignette?
+
+---
+
+# An Experiment
+
+```{r, eval = FALSE}
+so_vignette(1249548, convert = TRUE) #<<
+```
+
+![:scale 70%](images/so_vignette1.png)
+
+---
+
+# An Experiment
+
+```{r, eval = FALSE}
+so_vignette(1249548, convert = TRUE) #<<
+```
+
+![:scale 70%](images/so_vignette2.png)
 
 ---
 
@@ -610,6 +777,10 @@ https://github.com/shabbychef/mazealls
  <!--  -->
 
  - Think about how a new user would approach your package -- where should they start?
+
+ <!--  -->
+ 
+ - If this inspires you to write a vignette, please let me know on Twitter!
 
  <!--  -->
  
