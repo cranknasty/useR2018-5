@@ -24,6 +24,7 @@ output:
       highlightLines: true
       countIncrementalSlides: false
       beforeInit: "macros.js"
+      selfContained: true
     css: [default, metropolis, metropolis-fonts, "custom-css.css"]
 editor_options: 
   chunk_output_type: console

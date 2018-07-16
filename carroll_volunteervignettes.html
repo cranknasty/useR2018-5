@@ -417,8 +417,8 @@ we really want a way to search the _actual_ vignettes.
 ]
 
 .pull-right[
-<div id="htmlwidget-14e6d2c75f519b86e00e" style="width:100%;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-14e6d2c75f519b86e00e">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33"],[null,"knitr","R.rsp","knitr, R.rsp","knitr, rmarkdown","rmarkdown, knitr","utils, knitr","utils","R.rsp, knitr","packagedocs","knitr, rmarkdown, prettydoc","car, MASS, mlbench, beanplot, doBy, insuranceData,\nrmarkdown, knitr, data.table, ggplot2, colormap, modelwordcloud","elliptic, emulator","knitr,","knitr, bookdown, prettydoc","knitr, data.table","knitr, packagedocs","knitr, pander","knitr, prettydoc","knitr, RefManageR","knitr, rmarkdown, etl, dplyr, ggplot2, lubridate,\nmgcv, leaflet, clifro","knitr, rmarkdown, RANN, rgeos, maptools","knitr, rmarkdown, rgdal","knitr, rmarkdown, webshot","knitr, utils","knitr,rmarkdown","nbconvertR","noweb","patchDVI","R.rsp, knitr,","rmarkdown","rmarkdown, R.rsp","startup"],[9758,2758,125,25,21,7,7,6,5,4,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>VignetteBuilder<\/th>\n      <th>n<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"fillContainer":true,"searching":false,"pageLength":10,"scrollY":350,"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a3b957c0c6e552d95ece" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a3b957c0c6e552d95ece">{"x":{"filter":"none","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33"],[null,"knitr","R.rsp","knitr, R.rsp","knitr, rmarkdown","rmarkdown, knitr","utils, knitr","utils","R.rsp, knitr","packagedocs","knitr, rmarkdown, prettydoc","car, MASS, mlbench, beanplot, doBy, insuranceData,\nrmarkdown, knitr, data.table, ggplot2, colormap, modelwordcloud","elliptic, emulator","knitr,","knitr, bookdown, prettydoc","knitr, data.table","knitr, packagedocs","knitr, pander","knitr, prettydoc","knitr, RefManageR","knitr, rmarkdown, etl, dplyr, ggplot2, lubridate,\nmgcv, leaflet, clifro","knitr, rmarkdown, RANN, rgeos, maptools","knitr, rmarkdown, rgdal","knitr, rmarkdown, webshot","knitr, utils","knitr,rmarkdown","nbconvertR","noweb","patchDVI","R.rsp, knitr,","rmarkdown","rmarkdown, R.rsp","startup"],[9758,2758,125,25,21,7,7,6,5,4,3,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>VignetteBuilder<\/th>\n      <th>n<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"bPaginate":false,"fillContainer":true,"searching":false,"pageLength":10,"scrollY":350,"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 ]
 
 https://juliasilge.com/blog/mining-cran-description/
@@ -805,7 +805,8 @@ What if I saw a good example... could I make that into a vignette?
 <script>var slideshow = remark.create({
 "highlightStyle": "github",
 "highlightLines": true,
-"countIncrementalSlides": false
+"countIncrementalSlides": false,
+"selfContained": true
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
